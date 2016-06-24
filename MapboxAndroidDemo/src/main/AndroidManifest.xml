@@ -26,6 +26,14 @@
         </activity>
 
         <activity
+            android:name=".examples.UserLine"
+            android:label="@string/activity_location_basic_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
             android:name=".examples.SimpleMapViewActivity"
             android:label="@string/activity_basic_simple_mapview_title">
             <meta-data
@@ -190,22 +198,6 @@
         <activity
             android:name=".examples.LocationPickerActivity"
             android:label="@string/activity_lab_location_picker_title">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-
-        <activity
-            android:name=".examples.BasicMarkerViewActivity"
-            android:label="@string/activity_annotation_marker_view_title">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-
-        <activity
-            android:name=".examples.AnimatedMarkerActivity"
-            android:label="@string/activity_annotation_animated_marker_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

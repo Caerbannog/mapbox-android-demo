@@ -116,11 +116,11 @@ public class DrawGeojsonLineActivity extends AppCompatActivity implements OnMapR
                             points.add(latLng);
                         }
                     }
+                    System.out.print(json);
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Exception Loading GeoJSON: " + e.toString());
             }
-
             return points;
         }
 

@@ -31,6 +31,7 @@
     <string name="lab_category">Lab</string>
 
     <!-- example titles -->
+    <string name="activity_basic_exercice_mapview_title">Track drawing tool</string>
     <string name="activity_basic_simple_mapview_title">A simple map view</string>
     <string name="activity_basic_support_map_frag_title">Support map fragment</string>
     <string name="activity_basic_mapbox_options_title">Dynamically build a map view</string>
@@ -43,7 +44,6 @@
     <string name="activity_annotation_geojson_line_title">Draw a GeoJSON line</string>
     <string name="activity_annotation_polygon_title">Draw a polygon</string>
     <string name="activity_annotation_marker_view_title">Draw a marker view</string>
-    <string name="activity_annotation_animated_marker_title">Animate marker position</string>
     <string name="activity_camera_animate_title">Animate the map camera</string>
     <string name="activity_camera_bounding_box_title">Fit camera in bounding box</string>
     <string name="activity_offline_simple_title">A simple offline map</string>
@@ -56,6 +56,7 @@
     <string name="activity_lab_location_picker_title">Location Picker</string>
 
     <!-- example descriptions-->
+    <string name="activity_basic_exercice_mapview_description">Draw your track and display the lenght of it</string>
     <string name="activity_basic_simple_mapview_description">Show a map in your app using the Mapbox Android SDK.</string>
     <string name="activity_basic_support_map_frag_description">Include a map fragment within your app using Android support library.</string>
     <string name="activity_basic_mapbox_options_description">Add a mapview in a dynamically created layout.</string>
@@ -68,7 +69,6 @@
     <string name="activity_annotation_geojson_line_description">Draw a polyline by parsing a GeoJSON file with the Mapbox Android SDK.</string>
     <string name="activity_annotation_polygon_description">Draw a vector polygon on a map with the Mapbox Android SDK.</string>
     <string name="activity_annotation_marker_view_description">Attach a view to a given position on the map.</string>
-    <string name="activity_annotation_animated_marker_description">Animate the marker to a new position on the map.</string>
     <string name="activity_camera_animate_description">"Animate the map's camera position, tilt, bearing, and zoom."</string>
     <string name="activity_camera_bounding_box_description">Position the camera so that all the given markers are in view.</string>
     <string name="activity_offline_simple_description">Download and view an offline map using the Mapbox Android SDK.</string>
@@ -82,7 +82,7 @@
 
     <!-- example urls-->
     <string name="empty_image"> </string>
-
+    <string name="activity_basic_exercice_liberty_url">https://i.imgur.com/dv4n6Qv.png</string>
     <string name="activity_basic_simple_mapview_url">https://www.mapbox.com/android-sdk/images/examples.png</string>
     <string name="activity_basic_support_map_frag_url">https://www.mapbox.com/android-sdk/images/support-fragment.png</string>
     <string name="activity_basic_mapbox_options_url">http://i.imgur.com/IhuviRz.png</string>
@@ -94,8 +94,6 @@
     <string name="activity_annotation_custom_marker_url">https://www.mapbox.com/android-sdk/images/custom-marker-icon.png</string>
     <string name="activity_annotation_geojson_line_url">https://www.mapbox.com/android-sdk/images/geojson.png</string>
     <string name="activity_annotation_polygon_url">https://www.mapbox.com/android-sdk/images/polygon.png</string>
-    <string name="activity_annotation_basic_marker_view_url">http://i.imgur.com/vbWTLIE.png</string>
-    <string name="activity_annotation_animated_marker_url">http://i.imgur.com/XegvIKr.png</string>
     <string name="activity_camera_animate_url">https://www.mapbox.com/android-sdk/images/animate-camera.gif</string>
     <string name="activity_camera_bounding_box_url">http://i.imgur.com/A0JL21Q.png</string> <!-- https://www.mapbox.com/android-sdk/images/fit-bound-camera.gif -->
     <string name="activity_offline_simple_url">https://www.mapbox.com/android-sdk/images/offline-map.png</string>

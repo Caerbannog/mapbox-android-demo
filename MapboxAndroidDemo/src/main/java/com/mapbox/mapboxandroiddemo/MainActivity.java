@@ -21,8 +21,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.mapbox.mapboxandroiddemo.adapter.ExampleAdapter;
 import com.mapbox.mapboxandroiddemo.examples.AnimateMapCameraActivity;
-import com.mapbox.mapboxandroiddemo.examples.AnimatedMarkerActivity;
-import com.mapbox.mapboxandroiddemo.examples.BasicMarkerViewActivity;
 import com.mapbox.mapboxandroiddemo.examples.BasicUserLocation;
 import com.mapbox.mapboxandroiddemo.examples.BoundingBoxCameraActivity;
 import com.mapbox.mapboxandroiddemo.examples.CustomRasterStyleActivity;
@@ -43,6 +41,7 @@ import com.mapbox.mapboxandroiddemo.examples.SimpleMapViewActivity;
 import com.mapbox.mapboxandroiddemo.examples.SimpleOfflineMapActivity;
 import com.mapbox.mapboxandroiddemo.examples.StaticImageActivity;
 import com.mapbox.mapboxandroiddemo.examples.SupportMapFragmentActivity;
+import com.mapbox.mapboxandroiddemo.examples.UserLine;
 import com.mapbox.mapboxandroiddemo.model.ExampleItemModel;
 import com.mapbox.mapboxandroiddemo.utils.ItemClickSupport;
 import com.mapbox.mapboxsdk.MapboxAccountManager;
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                if(currentCategory == R.id.nav_lab && position == 0) return;
+
                 startActivity(exampleItemModel.get(position).getActivity());
 
             }
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (drawer.isDrawerOpen(GravityCompat.START)) {
                 drawer.closeDrawer(GravityCompat.START);
             } else {
-                moveTaskToBack(true);
+                super.onBackPressed();
             }
         }
     }
@@ -146,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         exampleItemModel.clear();
         switch (id) {
             case R.id.nav_basics:
-
+                exampleItemModel.add(new ExampleItemModel(R.string.activity_basic_exercice_mapview_title, R.string.activity_basic_exercice_mapview_description, new Intent(MainActivity.this, UserLine.class), R.string.activity_basic_exercice_liberty_url));
                 exampleItemModel.add(new ExampleItemModel(R.string.activity_basic_simple_mapview_title, R.string.activity_basic_simple_mapview_description, new Intent(MainActivity.this, SimpleMapViewActivity.class), R.string.activity_basic_simple_mapview_url));
                 exampleItemModel.add(new ExampleItemModel(R.string.activity_basic_support_map_frag_title, R.string.activity_basic_support_map_frag_description, new Intent(MainActivity.this, SupportMapFragmentActivity.class), R.string.activity_basic_support_map_frag_url));
                 exampleItemModel.add(new ExampleItemModel(R.string.activity_basic_mapbox_options_title, R.string.activity_basic_mapbox_options_description, new Intent(MainActivity.this, MapboxMapOptionActivity.class), R.string.activity_basic_mapbox_options_url));
@@ -165,8 +164,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 exampleItemModel.add(new ExampleItemModel(R.string.activity_annotation_custom_marker_title, R.string.activity_annotation_custom_marker_description, new Intent(MainActivity.this, DrawCustomMarkerActivity.class), R.string.activity_annotation_custom_marker_url));
                 exampleItemModel.add(new ExampleItemModel(R.string.activity_annotation_geojson_line_title, R.string.activity_annotation_geojson_line_description, new Intent(MainActivity.this, DrawGeojsonLineActivity.class), R.string.activity_annotation_geojson_line_url));
                 exampleItemModel.add(new ExampleItemModel(R.string.activity_annotation_polygon_title, R.string.activity_annotation_polygon_description, new Intent(MainActivity.this, DrawPolygonActivity.class), R.string.activity_annotation_polygon_url));
-                exampleItemModel.add(new ExampleItemModel(R.string.activity_annotation_marker_view_title, R.string.activity_annotation_marker_view_description, new Intent(MainActivity.this, BasicMarkerViewActivity.class), R.string.activity_annotation_basic_marker_view_url));
-                exampleItemModel.add(new ExampleItemModel(R.string.activity_annotation_animated_marker_title, R.string.activity_annotation_animated_marker_description, new Intent(MainActivity.this, AnimatedMarkerActivity.class), R.string.activity_annotation_animated_marker_url));
                 currentCategory = R.id.nav_annotations;
                 break;
 
